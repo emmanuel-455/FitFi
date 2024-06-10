@@ -13,7 +13,13 @@ const app = express();
 
 
 //middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-frontend.vercel.app"],
+    methods: ["POST", "GET", "DELETE", "PATCH"],
+    credentials: true
+}
+));
 app.use(express.json())
 app.use((req, res, next) => {
   console.log(req.path, req.method)
