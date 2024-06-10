@@ -5,11 +5,14 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/src/app.js"
+      "rewrites": [
+        { "source": "/(.*)", "destination": "/" }
+      ]
     }
   ],
   "env": {
     "NODE_ENV": "production"
   }
 }
+
+
