@@ -1,18 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "src/**/*.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    {
-      "rewrites": [
-        { "source": "/(.*)", "destination": "/" }
-      ]
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
+    "version":2,
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "/"
+        }
+    ]
   }
-}
-
-
